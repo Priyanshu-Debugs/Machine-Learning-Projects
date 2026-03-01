@@ -40,7 +40,9 @@ similarity = joblib.load(
     os.path.join(BASE_DIR, "similarity_movies.pkl")
 )
 
-movies_dict = pickle.load(open("movie_dictionary.pkl", 'rb'))
+movies_dict = pickle.load(
+    open(os.path.join(BASE_DIR, "movie_dictionary.pkl"), "rb")
+)
 movies = pd.DataFrame(movies_dict)
 
 st.title("Movie Recommendation Engine")
