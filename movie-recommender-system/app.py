@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
+import joblib
 
 # To Fetch Poster of Recommended movies
 
@@ -31,7 +32,7 @@ def recommend(movie):
 
 # end of recommend function
 
-similarity = pickle.load(open("similarity.pkl", 'rb'))
+similarity = joblib.load(open('similarity.pkl', 'rb'))
 
 movies_dict = pickle.load(open("movie_dictionary.pkl", 'rb'))
 movies = pd.DataFrame(movies_dict)
