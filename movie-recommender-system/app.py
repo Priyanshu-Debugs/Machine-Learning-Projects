@@ -31,7 +31,7 @@ def recommend(movie):
         recommended_movies.append(movies.iloc[i[0]].title)
         # Fetch Poster from API
         recommended_movies_posters.append(fetch_poster(movie_id))
-    return recommended_movies
+    return recommended_movies, recommended_movies_posters
 
 # end of recommend function
 
