@@ -3,7 +3,7 @@ venv/
 .env/
 
 # Large pickle files
-*.pkl
+movie-recommender-system/similarity.pkl
 
 # Python cache
 __pycache__/
