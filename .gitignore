@@ -1,0 +1,17 @@
+# Virtual environments
+venv/
+.env/
+
+# Large pickle files
+movie-recommender-system/similarity.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Byte-compiled
+*.pyo
+
+# IDE
+.vscode/
+.idea/
