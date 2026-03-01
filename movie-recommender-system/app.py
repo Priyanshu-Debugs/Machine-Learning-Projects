@@ -3,6 +3,9 @@ import pandas as pd
 import pickle
 import requests
 import joblib
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # To Fetch Poster of Recommended movies
 
@@ -32,7 +35,10 @@ def recommend(movie):
 
 # end of recommend function
 
-similarity = joblib.load(open('similarity_movies.pkl', 'rb'))
+# Recommendations to deploy on streamlit cloud
+similarity = joblib.load(
+    os.path.join(BASE_DIR, "similarity_movies.pkl")
+)
 
 movies_dict = pickle.load(open("movie_dictionary.pkl", 'rb'))
 movies = pd.DataFrame(movies_dict)
